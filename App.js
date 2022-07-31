@@ -6,7 +6,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import rootReducer from "./slices";
 
-import AuthApp from "./components/AuthApp";
+import TodoApp from "./components/todo/TodoApp";
 
 const store = configureStore({
   reducer: rootReducer,
@@ -20,7 +20,7 @@ const store = configureStore({
 function App() {
   return (
     <Provider store={store}>
-      <AuthApp />
+      <TodoApp />
     </Provider>
   );
 }

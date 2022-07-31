@@ -4,7 +4,7 @@
 import React from "react";
 import { StyleSheet, View, Button } from "react-native";
 
-import useAuthActions from "../hooks/useAuthActions";
+import useAuthActions from "../../hooks/useAuthActions";
 
 function AuthButtons() {
   const { authorize, logout } = useAuthActions();

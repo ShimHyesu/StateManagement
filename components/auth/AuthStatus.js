@@ -5,7 +5,7 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-import useUser from "../hooks/useUser";
+import useUser from "../../hooks/useUser";
 
 function AuthStatus() {
   const user = useUser();
