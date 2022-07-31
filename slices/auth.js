@@ -5,13 +5,13 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 // 추후 다른 곳에서 불러와야 하기 때문에 export
 export const User = {
-  id,
-  username,
-  displayName,
+  id: null,
+  username: null,
+  displayName: null,
 };
 
 const AuthState = {
-  user,
+  user: null,
 };
 
 const initialState = {
