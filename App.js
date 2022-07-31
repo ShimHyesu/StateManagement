@@ -6,10 +6,16 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import rootReducer from "./slices";
 
+import AuthApp from "./components/AuthApp";
+
 const store = configureStore({ reducer: rootReducer });
 
 function App() {
-  return <Provider store={store}>{/* TODO : 컴포넌트 사용 */}</Provider>;
+  return (
+    <Provider store={store}>
+      <AuthApp />
+    </Provider>
+  );
 }
 
 export default App;
