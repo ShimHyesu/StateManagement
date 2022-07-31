@@ -1,3 +1,6 @@
+//
+// auth 모듈 작성하기
+//
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 // 추후 다른 곳에서 불러와야 하기 때문에 export
