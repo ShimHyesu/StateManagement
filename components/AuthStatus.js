@@ -5,10 +5,10 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-import { useSelector } from "react-redux";
+import useUser from "../hooks/useUser";
 
 function AuthStatus() {
-  const user = useSelector((state) => state.auth.user);
+  const user = useUser();
 
   return (
     <View style={styles.status}>
