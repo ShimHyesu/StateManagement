@@ -6,11 +6,15 @@ import { StyleSheet, View, TextInput } from "react-native";
 
 import BlackButton from "./BlackButton";
 
+import useTodosActions from "../../hooks/useTodosActions";
+
 function TodoInput() {
   const [text, setText] = useState("");
+  // add함수를 useTodosActions()에서 가져와 호출
+  const { add } = useTodosActions();
 
   const onPress = () => {
-    console.log("등록");
+    add(text);
     setText("");
   };
 

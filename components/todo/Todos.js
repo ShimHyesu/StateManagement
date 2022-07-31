@@ -6,11 +6,11 @@ import { StyleSheet, FlatList, View } from "react-native";
 
 import TodoItem from "./TodoItem";
 
+import useTodos from "../../hooks/useTodos";
+
 function Todos() {
-  const todos = [
-    { id: 1, text: "리액트 네이티브 배우기", done: true },
-    { id: 2, text: "상태 관리 배우기", done: false },
-  ];
+  // useTodos를 사용하여 할일 목록 상태를 조회해서 Flatlist의 data에 넣어주기
+  const todos = useTodos();
 
   return (
     <FlatList

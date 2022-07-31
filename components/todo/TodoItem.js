@@ -6,19 +6,23 @@ import { StyleSheet, Pressable, Text, View } from "react-native";
 
 import BlackButton from "./BlackButton";
 
+import useTodosActions from "../../hooks/useTodosActions";
+
 function TodoItem({ id, text, done }) {
+  // useTodoActions를 호출하여 toggle과 remove함수 받아온 뒤, Pressable 좌측 버튼 눌렀을 때 toggle함수, 우측 버튼을 눌렀을 때 remove함수 사용
+  const { remove, toggle } = useTodosActions();
   const onToggle = () => {
-    console.log(`토글 ${id}`);
+    toggle(id);
   };
 
   const onRemove = () => {
-    console.log(`제거 ${id}`);
+    remove(id);
   };
 
   return (
     <View style={styles.todo}>
       <Pressable onPress={onToggle} style={styles.toggle}>
-        <Text style={styles.doneText}>{text}</Text>
+        <Text style={done && styles.doneText}>{text}</Text>
       </Pressable>
       <BlackButton onPress={onRemove} title="삭제" />
     </View>
